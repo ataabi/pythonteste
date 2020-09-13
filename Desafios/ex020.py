@@ -3,11 +3,9 @@
 from random import shuffle
 deck = []
 r = 0
-
 while r != 4:
     a = input('Digite o nome do Aluno: ')
     r = r + 1
     deck.append(a)
-
 shuffle(deck)
 print(deck)
