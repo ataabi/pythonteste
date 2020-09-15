@@ -4,12 +4,20 @@
 #Dezena:3
 #Centena:8
 #Milhar:1
-n = input('Digite um numero entre 0 e 9999 \n: ')
-if len(n) == 1:
-    print(f'Unidade:{n[0]}')
-if len(n) == 2:
-    print(f'Unidade:{n[1]}\nDezena:{n[0]}')
-if len(n) == 3:
-    print(f'Unidade:{n[2]}\nDezena:{n[1]}\nCentena:{n[0]}')
-if len(n) == 4:
-    print(f'Unidade:{n[3]}\nDezena:{n[2]}\nCentena:{n[1]}\nMilhar:{n[0]}')
+n = int(input('Digite um numero entre 0 e 9999 \n: '))
+u = n // 1 % 10
+d = n // 10 % 10
+c = n // 100 % 10
+m = n // 1000 % 10
+print(f'Analisando o número {n}. \n'
+      f'{"*"*27}\n'
+      f'Unidade : {u}\n'
+      f'Dezena: {d}\n'
+      f'Centena: {c}\n'
+      f'Milhar: {m}')
+
+print(f'{"-"*27}\n'
+      f'|{"M":^5}|{"C":^5}|{"D":^5}|{"U":^5}|\n'
+      f'{"-"*27}\n'
+      f'|{m:^5}|{c:^5}|{d:^5}|{u:^5}|\n'
+      f'{"-"*27}')
