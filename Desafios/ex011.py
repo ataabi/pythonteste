@@ -3,8 +3,9 @@
 # sabendo que cada litro de tinta pinta uma area de 2m²
 
 print('Digite a altura e a largura da parede a ser pintada'
-      '\n para calcular a area e saber quanto de tinta você irar precissar')
-a = int(input('Digite a Altura :'))
-l = int(input('Digite a Largura : '))
+      '\npara calcular a área e saber quanto de tinta você irar precissar')
+a = float(input('Digite a Altura :'))
+l = float(input('Digite a Largura : '))
 area = a*l
-print(f'Você ira precissar de {(area/2)}l de tinta para pintar a parede ')
+print(f'Essa paredere possui {a}m x {l}m com uma área de {area:.2f}m²\n'
+      f'Você ira precissar de {(area/2):.2f}l de tinta para pintar a parede ')

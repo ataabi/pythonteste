@@ -9,6 +9,6 @@ print('Tente acertar o numero que esta na minha memoria \n'
       'Dica : É algo entre 0 e 5')
 r = int(input('Qual é o número ?'))
 if r == n:
-    print(f'Ola só vc acertou, eu estava pensando no {n}')
+    print(f'Olha só você acertou, eu estava pensando no {n}')
 else:
-    print('Que pena vc errou , tente de novo.')
+    print('Que pena você errou , tente de novo.')

@@ -5,12 +5,10 @@
 # Quantas letras tem o primeiro nome
 
 n = input('Digite seu nome: ')
-print('-*-'*10)
 split = n.split()
-print(f'Seu nome em Maiusculo \n'
-      f'{n.upper()},'
-      f'\nSeu nome em Minusculo'
-      f'\n{n.lower()}'
+print('\033[4:35m-*-\033[m'*18)
+print(f'Seu nome em Maiusculo fica {n.upper()},'
+      f'\nSeu nome em Minusculo fica {n.lower()}'
       f'\nSeu nome tem {(len(n))-(n.count(" "))} caracteres'
       f'\nE Somente seu primeiro nome tem {len(split[0])} caracteres ')
-print('-*-'*10)
+print('\033[4:35m-*-\033[m'*18)
