@@ -4,13 +4,13 @@
 # se já passou do tempo do alistamento.
 # seu programa tambem devera mostrar o tempo que falta ou que passou do prazo;
 from datetime import date
-dia = date.today()
-ano = int(input('Em que ano você nasceu ? \n: '))
-age = (dia.year)-ano
-print(f'{((dia.year)-ano)}')
+dia = date.today().year #Ano Atual
+ano = int(input('Em que ano você nasceu ? \n: ')) #Data de nascimento do Cantidato
+age = (dia)-ano # Idade do Canditado
+print(f'Em {dia} você tem {age}')
 if age <= 17:
-    print(f'Você ainda vai se elistar espere so mais {18-age} anos para isso')
+    print(f'Seu alistamento sera em {ano+18} ainda faltam {18-age} anos para isso')
 elif age == 18:
     print(f'Se deu mal ta na hora de se alistar.')
 elif age >= 19:
-    print(f'Sorte a sua ja passou {age-18} anos deis de seu alistamento')
+    print(f'Sorte a sua ja passou {age-18} anos des de seu alistamento')

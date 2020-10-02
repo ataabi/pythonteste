@@ -2,16 +2,16 @@
 # a media de idade do grupo
 # qual é o nome do homen mais velho.
 # quantas mulheres tem menos de 20 anos.
-l = {}
-lm = []
+l = {} # Dicionario com a idade e nome dos homens
+lm = [] # Lista com a idade dos homens
 m = 0 # contador de media
 cm = 0 # Contador de mulheres
 for c in range(0,4):
     print(f'---------- {c+1}° PESSOA ----------')
-    nome = input('Nome : ').title()
+    nome = input('Nome : ').strip().title()
     idade = int(input('Idade : '))
     m += idade
-    sexo = input('Sexo (M/F): ').title()
+    sexo = input('Sexo (M/F): ').strip().title()
     if 'F' in sexo:
         if idade < 20:
             cm += 1
@@ -21,5 +21,5 @@ for c in range(0,4):
 sorted(lm)
 older = int(lm[-1])
 print(f'A Média de idade é >{m/4}<,')
-print(f'O Homen mais velho é > {l[older]} <')
+print(f'O Homen mais velho é > {l[older]} < com {lm[-1]} anos')
 print(f'E o número de mulheres menores de 20 é >{cm}<')

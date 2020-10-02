@@ -3,6 +3,6 @@
 # Para inferiores ou iguais, o aumento é de 15%.
 s = float(input('Qual o salario do funcionario ? \n:'))
 if s <= 1250.00:
-    print(f'Com um aumento de 15% o novo salario sera de {(s+(s*0.15)):.2f}')
+    print(f'Com um aumento de 15%, o novo salario será de {(s+(s*0.15)):.2f}')
 else:
-    print(f'Com um aumento de 10% o novo salario sera de {(s+(s*0.10)):.2f}')
+    print(f'Com um aumento de 10%, o novo salario será de {(s+(s*0.10)):.2f}')

@@ -4,11 +4,11 @@ import unicodedata
 print('*'*45,'\nVamos ver se essa frase é um palindromo.')
 f = input('Digite uma Frase. \n: ')
 f = unicodedata.normalize('NFD',f)
-print(f'A Frase: {f.title()}')
 f = f.encode("ascii", "ignore")
 f = f.decode("utf-8")
 f = f.replace(' ','')
 r = f.replace(' ','')[::-1]
+print(f'A Frase {f.title()} invertida fica {r}')
 if f == r:
     print('Essa frase é um palindromo')
 else:

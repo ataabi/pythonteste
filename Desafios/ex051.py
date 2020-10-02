@@ -8,3 +8,4 @@ count = 1
 for c in range(p1,f,r):
     print(f'P{count}:({c}),',end=' ')
     count += 1
+print('Fim')

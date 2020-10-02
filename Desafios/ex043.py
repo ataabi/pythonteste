@@ -6,17 +6,17 @@
 # 30 até 40 : Obesidade
 # Acima de 40: Obsidade mórbida
 print('Cálculo do IMC')
-alt = float(input('Qual sua Altura ?\n: '))
-pes = float(input('Qual seu peso ?\n: '))
+alt = float(input('Qual sua Altura ?\n(m) : '))
+pes = float(input('Qual seu peso ?\n(kg) : '))
 imc = pes/alt**2
-print(f'\nSeu IMC: {imc:.2f} : ',end ='')
+print(f'Seu IMC: {imc:.2f} : ',end ='')
 if imc < 18.5:
-    print('Squeleto')
+    print('Abaixo do Peso (Esqueleto)')
 elif imc < 25:
-    print('Fitness')
+    print('Pedo ideal (Fitness)')
 elif imc < 30:
-    print('Gordin')
+    print('Sobrepeso (Gordin)')
 elif imc < 40:
-    print('Gordão')
+    print('Obesidade (Gordão)')
 elif imc > 40:
-    print('JAMANTA')
+    print('Obesidade Mórbida (JAMANTA)')
