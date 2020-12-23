@@ -18,13 +18,13 @@ while True:
     if esc in 'Nn':
         break
 print('-='*25)
-print(f'|{"Noº":^5}|{"Nome":^10}|{"Média":^9}|')
+print(f'|{"Noº":^3}|{"Nome":^10}|{"Média":^5}|')
 for e,c in enumerate(boletim):
-    print(f'|{e:^5}|{boletim[e][0]:^10}|{boletim[e][2]:^9}|')
+    print(f'|{e:^3}|{boletim[e][0]:^10}|{boletim[e][2]:<5}|')
 print('-='*25)
 
 while esc != 999:
-   esc = int(input('(Digite [999] para sair'
+   esc = int(input('[Digite [999] para sair]'
                    '\nExibir notas de qual aluno ? '))
    for e,c in enumerate(boletim):
        if e == esc:

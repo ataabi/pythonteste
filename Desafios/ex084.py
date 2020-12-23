@@ -3,37 +3,38 @@
 # A) Quantas pessoas forom cadastradas.
 # B) uma listagem com as pessoas mais pesadas.
 # C) uma listagem com as pessoas mais leves.
-lista = ['Choco', 11.0, 'Billy', 24.0, 'Zeus', 25.0, 'Godi', 13.0]
-menor = 0
-maior = 0
+
+lista = []
+mainl = []
+menor = maior = 0
+
 while True:
     lista.append(str(input('Nome: ')).strip().title())
     lista.append(float(input('Peso: ')))
+    if len(mainl) == 0:
+        maior = menor = lista[1]
+    else:
+        if lista[1] > maior:
+            maior = lista[1]
+        if lista[1] < menor:
+            menor = lista[1]
+    mainl.append(lista[:])
+    lista.clear()
     esc = input('Deseja continuar[S/N]: ').strip().lower()
     if esc in 'n':
         break
 
 print('-='*20)
+print(f'Foram Cadastradas {len(mainl)} pessoas')
 
-for e,p in enumerate(lista[1::2]):
-    if e == 0:
-        menor = maior = p
-    else:
-        if p > maior:
-            maior = p
-        if p < menor:
-            menor = p
+print(f'O menor peso é {menor}Kg de ',end='')
+for c in mainl:
+    if c[1] == menor:
+        print(c[0],end='. ')
+print()
 
-print(f'Foram Cadastradas {len(lista)/2:.0f} pessoas')
-print(f'O maior peso é de ',end='')
-for e,p in enumerate(lista):
-    if p == maior:
-        print(f'{lista[(e-1)]}, ',end='')
-print(f'pesando {maior:.2f}Kg')
-
-print(f'O menor peso de ',end='')
-for e,p in enumerate(lista):
-    if p == menor:
-        print(f'{lista[(e-1)]}, ',end='')
-print(f'pesando {menor:.2f}Kg')
-print('-='*20)
+print(f'O maior peso é {maior}Kg de ',end='')
+for c in mainl:
+    if c[1] == maior:
+        print(c[0],end='. ')
+print()
